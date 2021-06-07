@@ -641,9 +641,14 @@ margin-bottom: 20px;
     
 }
 
-.modal-clos-btn:hover {
+.modal-clos-btn:hover,
+.modal-clos-btn:focus {
     fill: var(--accent-color);
     transition: fill var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-policy-link {
+    color: var(--accent-color);
 }
 
 .modal-clos-icon {
@@ -728,6 +733,7 @@ cursor: pointer;
 }
 
 .form-label {
+    margin-bottom: 10px;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
@@ -770,10 +776,9 @@ cursor: pointer;
 }
 
 .form-input-wrapper {
+    margin-top: 4px;
     display: block;
     position: relative;
-    margin-bottom: 10px;
-    margin-top: 4px;
 }
 
 .form-input:focus + .form-icon {
@@ -785,11 +790,9 @@ cursor: pointer;
     height: 120px;
     width: 100%;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
     resize: none;
     padding: 12px 16px;
     margin-top: 4px;
-    margin-bottom: 20px;
     transition: border-color var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -820,32 +823,40 @@ cursor: pointer;
 }
 
 .form-checkbox:checked + .form-icon-checkbox {
-background: #2196F3;
+    background-image: url(../images/icon-check.svg);
+    background-size: contain;
+    background-origin: border-box;
 border-radius: 2px;
 border: 2px solid #2196F3;
-transition: background var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
-
+transition: background-image var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+background-color: var(--accent-color);
 }
 
-.form-icon-checkbox {
-    width: 15px;
+.form-checkbox:focus + .form-icon-checkbox {
+    border-color: var(--accent-color);
+}
+
+.form-icon-checkbox  {
+    vertical-align: middle;
+    display: inline-block;
+    width: 16px;
     height: 16px;
     background: #FFFFFF;
-    fill: #FFFFFF;
+    color: #FFFFFF;
     border: 2px solid #212121;
 border-radius: 4px;
 transition: background var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+cursor: pointer;
 }
 
 .form-checkbox-policy {
-    vertical-align: middle;
     font-weight: normal;
 font-size: 14px;
 line-height: 1.71;
 color: #757575;
 margin-bottom: 30px;
-
 }
+
 
 .form-btn {
     width: 200px;
@@ -862,7 +873,23 @@ margin-bottom: 30px;
     margin-right: auto;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 cursor: pointer;
+}
 
+.form-btn:focus {
+    width: 200px;
+    height: 50px;
+    background: #2196F3;
+    border-color: var(--accent-color);
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+cursor: pointer;
 }
 
 /* ============Страница portfolio================ */
